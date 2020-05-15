@@ -54,7 +54,7 @@ class Person {
     this.stomach = [];
   }
   toString() {
-    return `${this.name, this.age}`;
+    return `${this.name}, ${this.age}`;
   }
 }
 
@@ -175,14 +175,14 @@ class Student extends Lambdasian {
     this.className = attr.className;
     this.favSubjects = attr.favSubjects;
   }
-  listSubjects() {
-    return `Loving HTML, CSS, JS!`;
+  listSubjects(favSubjects) {
+    return `Loving ${this.favSubjects}`;
   }
   PRAssignment(subject) {
-    return `${Student.name} has submitted a PR for ${subject}`;
+    return `${this.name} has submitted a PR for ${subject}`;
   }
   sprintChallenge(subject) {
-    return `${Student.name} has begun sprint challenge on ${subject}`;
+    return `${this.name} has begun sprint challenge on ${subject}`;
   }
 }
 
@@ -206,10 +206,10 @@ class ProjectManager extends Instructor {
     this.favInstructor = attr.favInstructor;
   }
   standUp(channel) {
-    return `${ProjectManager.name} announces to ${channel}, @channel standy times!`;
+    return `${this.name} announces to ${channel}, @channel standy times!`;
   }
   debugsCode(Student, subject) {
-    return `${ProjectManager.name} debugs ${Student.name}'s code on ${subject}`;
+    return `${this.name} debugs ${Student.name}'s code on ${subject}`;
   }
 }
 
