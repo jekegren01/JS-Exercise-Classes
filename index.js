@@ -179,12 +179,11 @@ class Student extends Lambdasian {
     return `Loving HTML, CSS, JS!`;
   }
   PRAssignment(subject) {
-    return `${this.student.name} has submitted a PR for ${subject}`;
+    return `${Student.name} has submitted a PR for ${subject}`;
   }
   sprintChallenge(subject) {
-    return `${student.name} has begun sprint challenge on ${subject}`;
+    return `${Student.name} has begun sprint challenge on ${subject}`;
   }
-
 }
 
 /*
@@ -203,8 +202,15 @@ class Student extends Lambdasian {
 class ProjectManager extends Instructor {
   constructor(attr) {
     super(attr);
+    this.gradClassName = attr.gradClassName;
+    this.favInstructor = attr.favInstructor;
   }
-
+  standUp(channel) {
+    return `${ProjectManager.name} announces to ${channel}, @channel standy times!`;
+  }
+  debugsCode(Student, subject) {
+    return `${ProjectManager.name} debugs ${Student.name}'s code on ${subject}`;
+  }
 }
 
 /*
